@@ -1,0 +1,11 @@
+# Ignore compiled Python files
+*.pyc
+
+# Ignore virtual environment directories
+venv/
+
+# Ignore database files
+*.db
+*.sqlite
+*.sql
+*.dat

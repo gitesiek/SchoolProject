@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>School Project</title>
+  </head>
+  <body>
+    {% block content %}
+    {% endblock %}
+    
+     
+    {% if current_user.is_authenticated %}
+      {% include 'logout.html' %}
+    {% endif %}
+  </body>
+</html>
