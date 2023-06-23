@@ -1,6 +1,8 @@
 <div class="d-flex flex-column flex-shrink-0 p-3 mr-5">
     <hr>
     <ul>
+        <li><a href="{{ url_for('dashboard.dashboard') }}">Dashboard</a></li>
+        <hr>
         <li><a href="{{ url_for('dashboard.trend_analysis') }}">Trend Analysis</a></li>
         <li><a href="{{ url_for('dashboard.seasonal_analysis') }}">Seasonal Analysis</a></li>
         <li><a href="{{ url_for('dashboard.summary_statistics') }}">Summary Statistics</a></li>
