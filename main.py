@@ -1,17 +1,17 @@
-from flask import Flask, render_template, redirect
-from flask_login import LoginManager, login_required, logout_user
+from flask import Flask, render_template
+from flask_login import LoginManager
 
 from flask_wtf import CSRFProtect
 
 from Users.models import db, User
 from Users.users import users_bp
 
-from analysis import perform_trend_analysis
+from Dashboard.dashboard import dashboard_bp
 
 
 app = Flask(__name__, template_folder='templates')
 app.register_blueprint(users_bp)
-
+app.register_blueprint(dashboard_bp)
 
 csrf = CSRFProtect(app)
 
@@ -32,20 +32,6 @@ with app.app_context():
 def load_user(user_id):
     user = User.query.get(int(user_id))
     return user
-
-
-@app.route('/logout')
-@login_required
-def logout():
-    logout_user()
-    return redirect('/')
-
-
-@app.route('/analysis')
-@login_required
-def analysis():
-    trend_plot_data = perform_trend_analysis()
-    return render_template('analysis.html', trend_plot_data=trend_plot_data)
 
 
 @app.route('/')

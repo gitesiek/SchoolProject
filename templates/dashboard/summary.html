@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Table 5 Summary Statistics</h1>
+<table>
+  <tr>
+    <th>Statistic</th>
+    <th>Value</th>
+  </tr>
+  {% for stat in table5_stats.iterrows() %}
+    <tr>
+      <td>{{ stat[1]['index'] }}</td>
+      <td>{{ stat[1]['average_wages'] }}</td>
+    </tr>
+  {% endfor %}
+</table>
+<div>
+Count: The count represents the number of data points in the dataset. In this case, there are 29 data points.
+</div><div>
+Mean: The mean (also known as the average) represents the central tendency of the data. It is calculated by summing up all the values and dividing it by the count. The mean of the dataset is approximately 6411.30.
+</div><div>
+Standard Deviation (Std): The standard deviation measures the dispersion or spread of the data around the mean. It indicates how much the values deviate from the average. A higher standard deviation suggests greater variability in the dataset. The standard deviation for this dataset is approximately 585.26.
+</div><div>
+Minimum (Min): The minimum value represents the smallest value in the dataset. In this case, the minimum wage is 5536.8.
+</div><div>
+25th Percentile (Q1): The 25th percentile (also known as the first quartile) indicates the value below which 25% of the data falls. It is a measure of the dataset's lower range. The 25th percentile for this dataset is approximately 5851.87.
+</div><div>
+50th Percentile (Median or Q2): The 50th percentile (also known as the median or second quartile) divides the dataset into two equal halves. It represents the middle value of the dataset when it is sorted in ascending order. In this case, the median wage is approximately 6554.87.
+</div><div>
+75th Percentile (Q3): The 75th percentile (also known as the third quartile) indicates the value below which 75% of the data falls. It is a measure of the dataset's upper range. The 75th percentile for this dataset is approximately 6778.63.
+</div><div>
+Maximum (Max): The maximum value represents the largest value in the dataset. In this case, the maximum wage is 7508.34.
+</div><div>
+These statistics provide a summary of the dataset, describing its central tendency, variability, and range.
+</div>
+{% endblock content %}

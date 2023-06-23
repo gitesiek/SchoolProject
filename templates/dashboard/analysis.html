@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+<div>
+  <figure>
+    <img src="data:image/png;base64, {{ trend_plot_data }}" alt="Trend Analysis Plot">
+  </figure>
+</div>
+<div>
+The plot represents the average wages over time, with the x-axis representing the months and the y-axis representing the average wages.
+
+From January 2021 to May 2021, the average wages showed a slight fluctuation, starting at 5536.80 in January, increasing to 5929.05 in March, and then decreasing to 5637.34 in May. These fluctuations indicate some variability in the average wages during this period.
+
+However, from June 2021 to December 2021, there is a general upward trend in the average wages. The wages gradually increased from 5802.42 in June to 6644.39 in December. This indicates a positive growth in wages over the second half of the year.
+
+In January 2022, there was a slight decrease in average wages to 6064.24, but it picked up again in February and March, reaching 6220.04 and 6665.64, respectively. This suggests a continuation of the overall upward trend in wages.
+
+From April 2022 to July 2022, the average wages fluctuated around the 6600 range, with slight variations but no significant upward or downward trends.
+
+Starting from August 2022, there is another upward movement in the average wages. The wages increased from 6583.03 in August to 7329.96 in December, showing a considerable rise over this period.
+
+Moving into 2023, the trend of increasing wages continues. The average wages were 6883.96 in January, 7065.56 in February, and 7508.34 in March. This indicates a significant growth in wages during the first quarter of 2023.
+
+Overall, the plot reveals fluctuations in the earlier months, followed by an upward trend in wages during the latter half of 2021, a period of relative stability from April 2022 to July 2022, and then a significant increase in wages from August 2022 to March 2023.
+</div>
+{% endblock %}

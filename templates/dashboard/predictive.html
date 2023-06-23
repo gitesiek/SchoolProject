@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Predicted Wages</h1>
+<ul>
+  {% for wage in predicted_wages %}
+    <li>{{'{:.2f}'.format(wage)}} zł</li>
+  {% endfor %}
+</ul>
+The predicted wages range from 7277.57 zł to 7367.15 zł.
+
+The mean (average) of the predicted wages is approximately 7313.81 zł.
+
+The standard deviation of the predicted wages is approximately 17.29 zł, indicating a relatively small amount of variability around the mean.
+
+The minimum predicted wage is 7277.57 zł, while the maximum predicted wage is 7367.15 zł.
+
+The predicted wages appear to be relatively stable, with small fluctuations within a narrow range.
+
+These predicted wages provide an estimate of the expected values for future wages based on the predictive analysis. The mean value serves as a central estimate, while the range and standard deviation provide information about the variability of the predictions.
+{% endblock content %}
